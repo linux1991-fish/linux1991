@@ -1,7 +1,9 @@
 'use client'
 import Image from "next/image";
 
+import useIdioma from '@/components/listing_laguage'
 export default function Home() {
+    const idioma = useIdioma();
   return (
     <div className="flex h-full w-full ">
       <main className="flex h-full w-full  flex-col  p-5 md:p-20 pb-10">
@@ -36,7 +38,8 @@ export default function Home() {
             <span
               className="font-medium text-zinc-950 dark:text-zinc-50"
             >
-            ¡Hola a todos!
+            {idioma === 'es' ? '¡Hola a todos!' : 'Hello everyone!'}
+            
             </span>{" "}
     <br/>
 Soy el creador detrás del canal de YouTube {" "}

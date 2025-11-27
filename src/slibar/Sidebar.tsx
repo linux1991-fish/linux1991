@@ -9,8 +9,6 @@ import { MENU_ITEMS } from './sidebar_types';
 import Image from 'next/image';
 import { FaYoutube } from "react-icons/fa";
 import { enviarEventoIdioma } from '@/components/change_language';
-import useIdioma from '@/components/listing_laguage'
-import  IdiomaProvider from "@/components/listing_laguage";
 export default function Sidebar() {
   const [isCollapsed, setIsCollapsed] = useState(false);
   // const [isIdioma, setIsIdioma] = useState(UseIdioma());
@@ -20,7 +18,6 @@ export default function Sidebar() {
   const contentMarginClass = isCollapsed ? 'ml-2 md:ml-12' : 'ml-2 md:ml-42';
 
   const IconSize = isCollapsed ? 'w-10 h-8 md:w-20 md:h-16':'w-16 h-16 md:w-20 md:h-16 mt-10 md:mt-0';
-    const idioma = useIdioma();
   return (
     <>
       <div 
@@ -91,7 +88,6 @@ export default function Sidebar() {
       <main className={`p-4 ${contentMarginClass} transition-all duration-300`}>
         {/* Tus páginas o contenido principal van aquí */}
         hello
-            <div>{idioma === 'es' ? 'Hola' : 'Hello'}</div>
       </main>
     </>
   );
