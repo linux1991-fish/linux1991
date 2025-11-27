@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://linux1991.vercel.app/
+
+# Sitemaps
+Sitemap: https://linux1991.vercel.app/sitemap.xml
